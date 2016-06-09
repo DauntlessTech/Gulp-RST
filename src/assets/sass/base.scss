@@ -91,16 +91,20 @@ code {
 
 /* Banner
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.banner_full {
+.banner {
   background-image: url($banner-img);
   background-size: cover;
-  color: #FFF;
-  height: 100%;
+  color: $white;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+}
+@for $i from 1 through 4 {
+  .banner_#{$i*25} {
+    height: #{$i * 25}vh;
+  }
 }
 .banner_button {
   position: absolute;

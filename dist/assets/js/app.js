@@ -22,7 +22,7 @@ var Landing = React.createClass({
   render: function () {
     return React.createElement(
       "div",
-      { className: "banner_full" },
+      { className: "banner banner_25" },
       React.createElement(
         "div",
         { className: "banner_message" },
@@ -40,8 +40,6 @@ var Landing = React.createClass({
     );
   }
 });
-
-ReactDOM.render(React.createElement(Landing, null), document.getElementById('landing'));
 
 var NavBar = React.createClass({
   displayName: "NavBar",
@@ -61,4 +59,14 @@ var NavBar = React.createClass({
 });
 
 ReactDOM.render(React.createElement(NavBar, null), document.getElementById('navbar_header'));
+
+var urlARR = location.href.split('/');
+var page = urlARR[urlARR.length - 1];
+console.log(page);
+
+switch (page) {
+  case '':
+    ReactDOM.render(React.createElement(Landing, null), document.getElementById('landing'));
+    break;
+}
 //# sourceMappingURL=app.js.map
