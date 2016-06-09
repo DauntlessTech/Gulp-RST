@@ -93,9 +93,9 @@ gulp.task('copy-jquery', function() {
 gulp.task('copy-js-vendor', function() {
   return gulp
     .src([
-      'src/assets/js/react.min.js',
-      'src/assets/js/react-dom.min.js',
-      'src/assets/js/jquery.min.js'
+      'src/assets/js/src/vendor/react.min.js',
+      'src/assets/js/src/vendor/react-dom.min.js',
+      'src/assets/js/src/vendor/jquery.min.js'
     ])
     .pipe(gulp.dest('dist/assets/js'));
 });
