@@ -13,7 +13,57 @@ Gulp-RST is a simple no-frills template for anyone looking to start a new web ap
 
 - gulp
 
-### DOCS
+## Structure
+
+```
+.
+|   .gitignore
+|   gulpfile.js
+|   package.json
+|   README.md
+|   
++---dist
+|   |   index.html
+|   |   
+|   \---assets
+|       +---css
+|       |   |   styles.css
+|       |   |   
+|       |   \---src
+|       |           styles.css
+|       |           styles.css.map
+|       |           
+|       \---js
+|               app.js
+|               app.js.map
+|               jquery.min.js
+|               react-dom.min.js
+|               react.min.js
+|               
+\---src
+    |   index.html
+    |   
+    \---assets
+        +---js
+        |   \---src
+        |       +---components
+        |       |       Button.jsx
+        |       |       Landing.jsx
+        |       |       Navbar.jsx
+        |       |       z_routes.jsx
+        |       |       
+        |       \---vendor
+        |               .eslintignore
+        |               jquery.min.js
+        |               react-dom.min.js
+        |               react.min.js
+        |               
+        \---sass
+                base.scss
+                skeleton.scss
+```
+
+## DOCS
 
 Feature    | Location                                                  | Description
 ---------- | --------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
