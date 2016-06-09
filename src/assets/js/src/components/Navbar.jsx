@@ -8,5 +8,3 @@ var NavBar = React.createClass({
     );
   }
 });
-
-ReactDOM.render( <NavBar /> , document.getElementById('navbar_header'));
