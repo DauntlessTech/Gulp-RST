@@ -93,9 +93,9 @@ gulp.task('copy-jquery', function() {
 gulp.task('copy-js-vendor', function() {
   return gulp
     .src([
-      'src/assets/js/src/vendor/react.min.js',
-      'src/assets/js/src/vendor/react-dom.min.js',
-      'src/assets/js/src/vendor/jquery.min.js'
+      'src/assets/js/react.min.js',
+      'src/assets/js/react-dom.min.js',
+      'src/assets/js/jquery.min.js'
     ])
     .pipe(gulp.dest('dist/assets/js'));
 });
@@ -111,7 +111,7 @@ gulp.task('concat', ['copy-react', 'copy-react-dom', 'eslint'], function() {
       only: [
         'src/assets/js/src/components',
       ],
-      compact: false
+      compact: true
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/assets/js'));
@@ -134,7 +134,7 @@ gulp.task('sass', function() {
     ]
   };
 
-  return gulp.src(['src/assets/sass/skeleton.scss', 'src/assets/sass/colors.scss', 'src/assets/sass/base.scss'])
+  return gulp.src(['src/assets/sass/skeleton.scss', 'src/assets/sass/*.scss'])
     .pipe(plumber(plumberOptions))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
