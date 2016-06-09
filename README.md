@@ -27,8 +27,6 @@ Gulp-RST is a simple no-frills template for anyone looking to start a new web ap
 |   |   
 |   \---assets
 |       +---css
-|       |   |   styles.css
-|       |   |   
 |       |   \---src
 |       |           styles.css
 |       |           styles.css.map
@@ -36,9 +34,6 @@ Gulp-RST is a simple no-frills template for anyone looking to start a new web ap
 |       \---js
 |               app.js
 |               app.js.map
-|               jquery.min.js
-|               react-dom.min.js
-|               react.min.js
 |               
 \---src
     |   index.html
