@@ -967,9 +967,17 @@ tr th {
   border-bottom: 1px solid black; }
 
 @charset "UTF-8";
-/* Colors
+/* Fonts
 -------------------------------------------------- */
 /* URLS
+-------------------------------------------------- */
+@font-face {
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format("woff2"); }
+
+/* Colors
 -------------------------------------------------- */
 body,
 html {
@@ -1017,8 +1025,8 @@ code {
   color: #1E1E1E;
   text-decoration: none; }
   .button-primary:hover {
-    color: #FFFFFF;
-    background-color: #1E1E1E !important; }
+    color: #1E1E1E !important;
+    background-color: #FFFFFF !important; }
 
 /* Card
 -------------------------------------------------- */

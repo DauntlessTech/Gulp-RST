@@ -1,3 +1,19 @@
+/* Fonts
+-------------------------------------------------- */
+$font_0: Material Icons;
+
+/* URLS
+-------------------------------------------------- */
+$url_0: url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2);
+$banner-img: "https://unsplash.it/1920/1080?blur&image=10";
+
+@font-face {
+	font-family: $font_0;
+	font-style: normal;
+	font-weight: 400;
+	src: local('Material Icons'), local('MaterialIcons-Regular'), $url_0 format('woff2');
+}
+
 /* Colors
 -------------------------------------------------- */
 $blue: #64B5F6;
@@ -5,9 +21,6 @@ $white: #FFFFFF;
 $slate: #1E1E1E;
 $transparent: rgba(0,0,0,0);
 
-/* URLS
--------------------------------------------------- */
-$banner-img: "https://unsplash.it/1920/1080?blur&image=10";
 body,
 html {
   overflow-x: hidden;
@@ -57,8 +70,8 @@ code {
   color: $slate;
   text-decoration: none;
   &:hover {
-    color: $white;
-    background-color: $slate !important;
+    color: $slate !important;
+    background-color: $white !important;
   }
 }
 
