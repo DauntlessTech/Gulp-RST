@@ -24,6 +24,8 @@ $transparent: rgba(0,0,0,0);
 body,
 html {
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 code {
   color: $slate;
@@ -31,11 +33,16 @@ code {
 
 /* Navbar
 -------------------------------------------------- */
-.navbar_header {
-  padding-top: 1rem !important;
-}
-.navbar_header {
+#navbar_header {
   background-color: #FFF;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.navbar{
+  background-color: white;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+  margin: 0 !important;
 }
 .brand {
   height: 100%;
@@ -43,7 +50,7 @@ code {
   font-weight: 300;
   margin: 1rem;
   text-decoration: none;
-  color: white;
+  color: $slate;
 }
 
 /* Buttons
@@ -56,6 +63,7 @@ code {
   transition: all 0.3s ease;
   color: $slate;
   text-decoration: none;
+  margin: 0 1rem 0 1rem;
   &:hover {
     color: $white;
     background-color: $blue;
@@ -74,13 +82,22 @@ code {
     background-color: $white !important;
   }
 }
+.no-border{
+  border: none !important;
+  &:hover{
+    color: $blue !important;
+    background-color: $white !important;
+  }
+}
 
 /* Card
 -------------------------------------------------- */
 .card {
   box-shadow: 0 0 4px lighten($slate, 90%);
   border-radius: 3px;
-  padding: 1rem;
+  padding: 25px;
+  display: block;
+  column-gap: 25px !important;
 }
 
 /* Collapse
@@ -104,19 +121,25 @@ code {
 
 /* Banner
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.banner_container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  clear: both;
+  display: flex;
+  width: 100%;
+}
 .banner {
   background-image: url($banner-img);
   background-size: cover;
   color: $white;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
 }
 @for $i from 1 through 4 {
   .banner_#{$i*25} {
     height: #{$i * 25}vh;
+    margin: 0 auto;
   }
 }
 .banner_button {
@@ -127,9 +150,12 @@ code {
 }
 .banner_message {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  margin: auto;
+  width: 50%;
+  top: 8vh;
+  left: 20vw;
+  height: 100%;
+  padding: 0;
 }
 .banner_header {
   margin-bottom: 0.5rem;
@@ -141,6 +167,16 @@ code {
 }
 .banner_description {
   font-weight: 300;
+  line-height: 3rem;
+  font-size: 2rem;
+  top: 40%;
+  position: absolute;
+  transform: translate3d(0, -50%, 0);
+}
+
+#landing{
+  //NOTE find dynamic way to do this.
+  margin-bottom: 50vh;
 }
 
 /* Utils
@@ -162,6 +198,9 @@ code {
 
 .big_icon {
   font-size: 4rem;
+}
+.snippet{
+  margin-bottom: 2rem;
 }
 .text-left {
   text-align: left;
@@ -185,5 +224,15 @@ code {
   }
   .brand {
     font-size: 1rem;
+  }
+  .banner_header{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 468px) {
+  .banner_message{
+    width: 75%;
+    left: 10vw;
   }
 }

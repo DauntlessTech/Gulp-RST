@@ -6,5 +6,6 @@ ReactDOM.render( <NavBar /> , document.getElementById('navbar_header'));
 switch(page){
 case '':
     ReactDOM.render(<Landing />, document.getElementById('landing'));
+    ReactDOM.render(<MainContent />, document.getElementById('content'));
     break;
 }
